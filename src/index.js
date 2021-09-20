@@ -1,4 +1,16 @@
-const root = document.getElementById('root');
-const header = document.createElement('h1');
-header.appendChild(document.createTextNode('Hello World'));
-root.appendChild(header);
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import App from './components/App';
+import rootReducer from './reducers/index';
+import './index.css';
+
+const store = createStore(rootReducer);
+
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root'),
+);
