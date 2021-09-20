@@ -20,7 +20,7 @@
     <a href=""><strong> Microverse Page »</strong></a>
     <br />
     <br />
-    <a href="https://bookstore-h4n.herokuapp.com/">View Demo</a>
+    <a href="https://bookstore-han.herokuapp.com/">View Demo</a>
     ·
     <a href="https://github.com/300ms/book-store-react-redux/issues">Report Bug & Request Feature</a>
   </p>
