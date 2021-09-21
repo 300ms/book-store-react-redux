@@ -6,7 +6,27 @@ import App from './components/App';
 import rootReducer from './reducers/index';
 import './index.css';
 
-const store = createStore(rootReducer);
+const { v4: uuidv4 } = require('uuid');
+
+const bookList = [
+  {
+    id: uuidv4(),
+    category: 'History',
+    title: 'History Book 1',
+  },
+  {
+    id: uuidv4(),
+    category: 'Horror',
+    title: 'Horror Book 1',
+  },
+  {
+    id: uuidv4(),
+    category: 'Learning',
+    title: 'Learning Book 1',
+  },
+];
+
+const store = createStore(rootReducer, { books: bookList });
 
 ReactDOM.render(
   <Provider store={store}>

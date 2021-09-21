@@ -11,32 +11,34 @@ const BooksForm = () => {
     'Sci-Fi',
   ];
   return (
-    <form className="book-form" action="#">
-      <h3>
-        Create new book
-      </h3>
-      <br />
-      <div className="form-fields">
-        <label htmlFor="title">
-          Book Title:
+    <div className="booksForm">
+      <form className="book-form" action="#">
+        <h3>
+          Create new book
+        </h3>
+        <br />
+        <div className="form-fields">
+          <label htmlFor="title">
+            Book Title:
 
-          <input type="text" id="title" name="title" />
-        </label>
+            <input type="text" id="title" name="title" />
+          </label>
 
-        <label htmlFor="category">
-          Category:
-          <select name="category" id="category">
-            {
+          <label htmlFor="category">
+            Category:
+            <select name="category" id="category">
+              {
                     categories.map((cat, id) => (
                       <option key={`opt_${id * 2}`} value={id}>{cat}</option>
                     ))
                 }
-          </select>
-        </label>
+            </select>
+          </label>
 
-        <button type="button">Add Book</button>
-      </div>
-    </form>
+          <button type="submit">Add Book</button>
+        </div>
+      </form>
+    </div>
 
   );
 };
