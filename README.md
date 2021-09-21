@@ -61,6 +61,12 @@ In this project, we used React and Redux to build a very simple "book store" app
 
 #### Milestone-2
 
+* Create components,
+* Create containers,
+* Create actions,
+* Create reducers,
+* Display the Book List and Books Form
+* Add some styling
 
 #### Milestone-3
 
