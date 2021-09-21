@@ -24,15 +24,12 @@ const renderList = ({ state }) => {
           </thead>
           <tbody>
             {
-              bookList.map((book) => {
-                console.log(book);
-                return (
-                  <Book
-                    book={book}
-                    key={book.id}
-                  />
-                );
-              })
+              bookList.map((book) => (
+                <Book
+                  book={book}
+                  key={book.id}
+                />
+              ))
             }
           </tbody>
         </table>
