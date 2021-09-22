@@ -1,14 +1,19 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Book from '../components/Book';
+import { removeBook } from '../actions/index';
 
 const mapStateToProps = (state) => ({
   state,
 });
 
-const mapDispatchToProps = () => ({});
+const mapDispatchToProps = (dispatch) => ({
+  handleRemoveBook: (book) => {
+    dispatch(removeBook(book));
+  },
+});
 
-const renderList = ({ state }) => {
+const renderList = ({ state, handleRemoveBook }) => {
   const bookList = state.books;
 
   return (
@@ -28,6 +33,7 @@ const renderList = ({ state }) => {
                 <Book
                   book={book}
                   key={book.id}
+                  handleRemoveBook={handleRemoveBook}
                 />
               ))
             }
@@ -37,6 +43,7 @@ const renderList = ({ state }) => {
     </div>
   );
 };
+
 const BooksList = connect(mapStateToProps, mapDispatchToProps)(renderList);
 
 export default BooksList;

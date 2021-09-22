@@ -1,8 +1,10 @@
 import { CREATE_BOOK, REMOVE_BOOK } from '../helpers/helper';
 
+const { v4: uuidv4 } = require('uuid');
+
 const addBook = (book) => ({
   type: CREATE_BOOK,
-  id: book.id,
+  id: uuidv4(),
   title: book.title,
   category: book.category,
 });

@@ -53,17 +53,24 @@ In this project, we used React and Redux to build a very simple "book store" app
 ### Milestones
 
 #### Milestone-1
-
 * Create new React Application,
 * Remove unnecessary assets and create initial assets,
 * Install prop-types, react-redux, and redux packages by using npm,
 * Set up code linters
 
 #### Milestone-2
-
+* Create components,
+* Create containers,
+* Create actions,
+* Create reducers,
+* Display the Book List and Books Form
+* Add some styling
 
 #### Milestone-3
-
+Added methods to dispatch the redux store properly for adding and removing books.
+* Create the handleChange method and implement it
+* Create the handleSubmit method and implement it
+* Create the handleRemoveBook method and implement it
 
 #### Milestone-4
 
