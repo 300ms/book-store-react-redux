@@ -29,7 +29,8 @@ const renderList = ({ state, handleRemoveBook, handleFilterChange }) => {
 
   return (
     <div className="booksList">
-      <div>
+      <div className="filter-category">
+        <span>Category Filter:&nbsp;&nbsp;</span>
         <CategoryFilter
           handleFilterChange={handleFilterChange}
         />
