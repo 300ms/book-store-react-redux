@@ -1,22 +1,16 @@
 /* eslint-disable max-len */
 import React from 'react';
 import { PropTypes } from 'prop-types';
-import { removeBook } from '../actions';
-
-const handleRemoveBook = (book) => {
-  removeBook(book.id);
-};
 
 const Book = (props) => {
-  const { book } = props;
+  const { book, handleRemoveBook } = props;
 
-  // console.log(this.state);
   return (
     <tr>
       <td>{book.id}</td>
       <td>{book.category}</td>
       <td>{book.title}</td>
-      <td><button type="submit" onClick={handleRemoveBook}>Delete Book</button></td>
+      <td><button type="submit" onClick={() => handleRemoveBook(book)}>Delete Book</button></td>
     </tr>
   );
 };
@@ -27,6 +21,7 @@ Book.propTypes = {
     category: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
   }).isRequired,
+  handleRemoveBook: PropTypes.func.isRequired,
 };
 
 export default Book;
