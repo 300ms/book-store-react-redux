@@ -1,4 +1,4 @@
-import { CREATE_BOOK, REMOVE_BOOK } from '../helpers/helper';
+import { CREATE_BOOK, REMOVE_BOOK, CHANGE_FILTER } from '../helpers/helper';
 
 const { v4: uuidv4 } = require('uuid');
 
@@ -14,4 +14,9 @@ const removeBook = (book) => ({
   id: book.id,
 });
 
-export { addBook, removeBook };
+const changeFilter = (filter) => ({
+  type: CHANGE_FILTER,
+  filter,
+});
+
+export { addBook, removeBook, changeFilter };

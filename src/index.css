@@ -60,6 +60,12 @@
   background: #f8f8f8;
 }
 
+.filter-category {
+  margin: 10px 70px;
+  display: flex;
+  justify-content: flex-end;
+}
+
 /* Responsive */
 
 @media (max-width: 767px) {
