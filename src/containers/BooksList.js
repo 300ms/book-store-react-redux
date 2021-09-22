@@ -16,7 +16,6 @@ const mapDispatchToProps = (dispatch) => ({
 const renderList = ({ state, handleRemoveBook }) => {
   const bookList = state.books;
 
-  console.log(state.books);
   return (
     <div className="booksList">
       <div className="table-wrapper">

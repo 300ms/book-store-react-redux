@@ -33,8 +33,6 @@ class BooksForm extends React.Component {
       const newState = { ...this.state, category: event.target.value };
       this.setState(newState);
     }
-
-    console.log(this.state);
   }
 
   handleSubmit(event) {
