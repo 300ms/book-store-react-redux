@@ -37,13 +37,13 @@ const renderList = ({ state, handleRemoveBook, handleFilterChange }) => {
       </div>
       <div className="table-wrapper">
         <table className="fl-table">
-          <thead>
+          {/* <thead>
             <tr>
               <th>BookId</th>
               <th>Category</th>
               <th>Title</th>
             </tr>
-          </thead>
+          </thead> */}
           <tbody>
             {
               bookList.map((book) => {
