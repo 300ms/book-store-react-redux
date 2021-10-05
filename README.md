@@ -73,7 +73,12 @@ Added methods to dispatch the redux store properly for adding and removing books
 * Create the handleRemoveBook method and implement it
 
 #### Milestone-4
+Implement a category filter to filter the books on the BooksList
 
+* Create the "CHANGE_FILTER" action
+* Create the "filter.js" reducer
+* Implement the "CategoryFilter" component
+* Implement the "handleFilterChange" method
 
 #### Milestone-5
 

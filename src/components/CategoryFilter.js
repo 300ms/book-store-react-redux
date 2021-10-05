@@ -22,10 +22,10 @@ const CategoryFilter = ({
   return (
 
     <div>
-      <select name="filter" id="filter" onChange={handleChange}>
+      <select className="categories font-normal" name="filter" id="filter-category" onChange={handleChange}>
         {
           categories.map((cat, id) => (
-            <option key={`opt_${id * 2}`} value={cat}>{cat}</option>
+            <option key={`opt_${id * 2}`} value={id}>{cat}</option>
           ))
         }
       </select>

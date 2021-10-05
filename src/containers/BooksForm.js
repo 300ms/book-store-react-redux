@@ -3,16 +3,6 @@ import { PropTypes } from 'prop-types';
 import { connect } from 'react-redux';
 import { addBook } from '../actions';
 
-const categories = [
-  'Action',
-  'Biography',
-  'History',
-  'Horror',
-  'Kids',
-  'Learning',
-  'Sci-Fi',
-];
-
 class BooksForm extends React.Component {
   constructor(props) {
     super(props);
@@ -20,6 +10,17 @@ class BooksForm extends React.Component {
       title: null,
       category: null,
     };
+
+    this.categories = [
+      'Category',
+      'Action',
+      'Biography',
+      'History',
+      'Horror',
+      'Kids',
+      'Learning',
+      'Sci-Fi',
+    ];
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -44,36 +45,24 @@ class BooksForm extends React.Component {
   }
 
   render() {
+    const { title } = this.state;
     return (
-      <div className="booksForm">
-        <form className="book-form" action="#">
-          <h3>
-            Create new book
-          </h3>
-          <br />
-          <div className="form-fields">
-            <label htmlFor="title">
-              Book Title:
-
-              <input type="text" id="title" name="title" onChange={this.handleChange} />
-            </label>
-
-            <label htmlFor="category">
-              Category:
-              <select name="category" id="category" onChange={this.handleChange}>
-                {
-                      categories.map((cat, id) => (
-                        <option key={`opt_${id * 2}`} value={cat}>{cat}</option>
-                      ))
-                  }
-              </select>
-            </label>
-
-            <button type="submit" onClick={this.handleSubmit}>Add Book</button>
-          </div>
+      <div className="form-block">
+        <div className="form-title font-bold">
+          add new book
+        </div>
+        <form action="#" onSubmit={this.handleSubmit}>
+          <input className="inputValue" type="text" onChange={this.handleChange} value={title} id="inputValue" placeholder="Book title" />
+          <select className="category" name="category" id="category" onChange={this.handleChange}>
+            {
+              this.categories.map((cat, id) => (
+                <option key={`opt_${id * 2}`} value={id}>{cat}</option>
+              ))
+            }
+          </select>
+          <button id="submit-btn" className="Rectangle-2 submit-btn base-button" type="submit"><p>Add Book</p></button>
         </form>
       </div>
-
     );
   }
 }

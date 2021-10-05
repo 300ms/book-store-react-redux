@@ -1,150 +1,388 @@
-/* Table Styles */
-
-.table-wrapper {
-  margin: 10px 70px 70px;
-  box-shadow: 0 35px 50px rgba(0, 0, 0, 0.2);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 
-.fl-table {
-  border-radius: 5px;
-  font-size: 12px;
+:root {
+  --bubble-gum-pink: #ff5ab7;
+  --black: #1e1e1e;
+  --pale-grey: #f5f6fa;
+  --black-three: #121212;
+  --azure: #0290ff;
+  --medium-blue: #307bbe;
+  --dodger-blue: #379cf6;
+  --white: #fafafa;
+}
+
+/* Fonts */
+
+@font-face {
+  font-family: Montserrat;
+  src:
+    local(montserrat-regular),
+    url(./fonts/monserrat_woff/Montserrat-Regular.woff2) format("woff2"),
+    url(./fonts/monserrat_woff/Montserrat-Regular.woff) format("woff");
   font-weight: normal;
-  border: none;
-  border-collapse: collapse;
-  width: 100%;
-  max-width: 100%;
-  white-space: nowrap;
-  background-color: white;
+  font-style: normal;
+  font-stretch: normal;
 }
 
-.book-form {
+@font-face {
+  font-family: Montserrat;
+  src:
+    local(montserrat-bold),
+    url(./fonts/monserrat_woff/Montserrat-Bold.woff2) format("woff2"),
+    url(./fonts/monserrat_woff/Montserrat-Bold.woff) format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap");
+
+.font-normal,
+.font-bold {
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+}
+
+.font-normal {
+  font-weight: normal;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.panel {
+  margin: 0 auto;
+  position: relative;
+  width: 1400px;
+  height: 1097px;
+  border-radius: 4px;
+  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
+  background-color: var(--white);
+}
+
+.Bookstore-CMS {
+  margin-left: 100px;
+  width: 1600px;
+  height: 1434px;
+  background-color: var(--pale-grey);
+}
+
+.title-header {
+  margin-left: 100px;
+  width: 240px;
+  height: 37px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  letter-spacing: normal;
+  color: var(--azure);
+}
+
+.panel-bg {
+  position: relative;
+  top: 0;
+  left: 50%;
+  margin-bottom: 40px;
+  transform: translateX(-50%);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  max-width: 100%;
-  margin: 10px 70px 70px;
-  box-shadow: 0 35px 50px rgba(0, 0, 0, 0.2);
-  padding: 10px;
-  color: #fff;
-  background: #324960;
+  width: 1400px;
+  height: 97px;
+  border-radius: 4px;
+  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
+  background-color: #fff;
 }
 
-.form-fields {
-  width: 70%;
+.books {
+  width: 59px;
+  height: 16px;
+  margin-left: 50px;
+  margin-right: 50px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  letter-spacing: 1.9px;
+  color: var(--black-three);
+  text-transform: uppercase;
+}
+
+.categories {
+  position: absolute;
+  top: 3.7%;
+  left: 36%;
+  border: none;
+  width: 105px;
+  height: 16px;
+  opacity: 0.5;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  letter-spacing: 1.9px;
+  color: var(--black-three);
+  background: #fff;
+}
+
+.login {
+  margin-left: 55%;
+  background-image: url("./icons/login_icon.png");
+  background-repeat: no-repeat;
+  width: 45px;
+  height: 45px;
+  background-size: cover;
+}
+
+.list-item {
   display: flex;
+  position: relative;
+  list-style: none;
+  margin: 1em auto;
+  align-items: center;
   justify-content: space-around;
 }
 
-.fl-table td,
-.fl-table th {
-  text-align: center;
-  padding: 8px;
+.Lesson-Panel {
+  width: 1200px;
+  height: 170px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
 }
 
-.fl-table td {
-  border-right: 1px solid #f8f8f8;
-  font-size: 12px;
+.Current-Chapter {
+  width: 126px;
+  height: 18px;
+  opacity: 0.5;
+  font-family: "Roboto Slab", serif;
+  font-size: 13px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-three);
+  text-transform: uppercase;
 }
 
-.fl-table thead th {
-  color: #fff;
-  background: #4fc3a1;
+.School-of {
+  width: 49px;
+  height: 18px;
+  opacity: 0.5;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  letter-spacing: normal;
+  color: var(--black-three);
 }
 
-.fl-table thead th:nth-child(odd) {
-  color: #fff;
-  background: #324960;
+.title {
+  height: 29px;
+  font-family: "Roboto Slab", serif;
+  font-size: 22px;
+  letter-spacing: -0.2px;
+  color: var(--black-three);
 }
 
-.fl-table tr:nth-child(even) {
-  background: #f8f8f8;
-}
-
-.filter-category {
-  margin: 10px 70px;
+.book-actions {
+  width: 30%;
+  height: 66%;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-/* Responsive */
+.Suzanne-Collins {
+  width: 107px;
+  height: 19px;
+  font-family: "Roboto Slab", serif;
+  font-size: 14px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
 
-@media (max-width: 767px) {
-  .fl-table,
-  .bookForm {
-    display: block;
-    width: 100%;
-  }
+.book-option {
+  position: relative;
+  height: 19px;
+  font-family: "Roboto Slab", serif;
+  font-size: 14px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+  text-decoration: none;
+  background-color: transparent;
+  border: 0;
+}
 
-  .table-wrapper::before {
-    content: "Scroll horizontally >";
-    display: block;
-    text-align: right;
-    font-size: 11px;
-    color: white;
-    padding: 0 0 10px;
-  }
+.middle-option {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-left: solid 1px #e8e8e8;
+  border-right: solid 1px #e8e8e8;
+}
 
-  .fl-table thead {
-    float: left;
-  }
+.-Percent-Complete {
+  width: 68px;
+  height: 39px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 32px;
+  letter-spacing: normal;
+  color: var(--black-three);
+}
 
-  .fl-table tbody {
-    width: auto;
-    position: relative;
-    overflow-x: auto;
-  }
+.Completed {
+  width: 80px;
+  height: 18px;
+  opacity: 0.5;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  letter-spacing: normal;
+  color: var(--black-three);
+}
 
-  .fl-table td,
-  .fl-table th {
-    padding: 20px 0.625em 0.625em 0.625em;
-    height: 60px;
-    vertical-align: middle;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    overflow-y: auto;
-    width: 120px;
-    font-size: 13px;
-    text-overflow: ellipsis;
-  }
+.Current-Lesson {
+  width: 75px;
+  height: 21px;
+  font-family: "Roboto Slab", serif;
+  font-size: 16px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: var(--black-three);
+  margin: 8px 0;
+}
 
-  .fl-table thead,
-  .fl-table tbody,
-  .fl-table thead th {
-    display: block;
-  }
+.Rectangle-2 {
+  width: 184px;
+  height: 33px;
+  border-radius: 3px;
+  background-color: var(--azure);
+  border: none;
+}
 
-  .fl-table thead th {
-    text-align: left;
-    border-bottom: 1px solid #f7f7f9;
-  }
+/* buttons */
+.base-button {
+  font-family: "Roboto Slab", serif;
+  font-size: 13px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  margin: auto;
+}
 
-  .fl-table thead th:last-child {
-    border-bottom: none;
-  }
+.Update-progress {
+  position: relative;
+  width: 143px;
+  height: 18px;
+}
 
-  .fl-table tbody tr {
-    display: table-cell;
-  }
+.submit-btn {
+  width: 184px;
+  position: relative;
+  height: 45px;
+  font-weight: bold;
+}
 
-  .fl-table tbody td {
-    display: block;
-    text-align: center;
-  }
+.progress-numbers {
+  height: 72%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
 
-  .fl-table tr:nth-child(even) {
-    background: transparent;
-  }
+.Rectangle-3 {
+  width: 90px;
+  height: 89.9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .fl-table tbody tr:nth-child(odd) {
-    background: none;
-  }
+.completion-meter {
+  display: flex;
+  align-items: center;
+}
 
-  .fl-table tr td:nth-child(odd) {
-    background: #f8f8f8;
-    border-right: 1px solid #e6e4e4;
-  }
+.Oval-2 {
+  position: relative;
+  width: 68px;
+  height: 68px;
+  background-image: url("./icons/percentage.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-  .fl-table tr td:nth-child(even) {
-    border-right: 1px solid #e6e4e4;
-  }
+.Line-2 {
+  width: 2px;
+  height: 70px;
+  border: solid 1px #e8e8e8;
+}
+
+/*  Form title */
+
+.form-block {
+  margin: 25px auto;
+  width: 1200px;
+  border-top: solid 1px #e8e8e8;
+}
+
+.form-title {
+  height: 24px;
+  margin: 24px 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  letter-spacing: -0.18px;
+  color: #888;
+  text-transform: uppercase;
+}
+
+.inputValue {
+  width: 664px;
+  height: 45px;
+  margin-right: 34px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  font-size: 16px;
+  padding-left: 15px;
+}
+
+.inputValue::placeholder {
+  color: #c4c4c4;
+}
+
+.category {
+  width: 285px;
+  height: 45px;
+  margin-right: 34px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  font-size: 16px;
+  padding-left: 15px;
+  color: #c4c4c4;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
 }
