@@ -43,6 +43,20 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap");
 
+.font-normal, .font-bold {
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+}
+
+.font-normal {
+  font-weight: normal;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
 .panel {
   margin: 0 auto;
   position: relative;
@@ -66,10 +80,6 @@
   height: 37px;
   font-family: "Montserrat", sans-serif;
   font-size: 30px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: normal;
   color: var(--azure);
 }
@@ -97,10 +107,6 @@
   margin-right: 50px;
   font-family: "Montserrat", sans-serif;
   font-size: 13px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: 1.9px;
   color: var(--black-three);
   text-transform: uppercase;
@@ -116,10 +122,6 @@
   opacity: 0.5;
   font-family: "Montserrat", sans-serif;
   font-size: 13px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: 1.9px;
   color: var(--black-three);
   background: #fff;
@@ -172,10 +174,6 @@
   opacity: 0.5;
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: normal;
   color: var(--black-three);
 }
@@ -184,10 +182,6 @@
   height: 29px;
   font-family: "Roboto Slab", serif;
   font-size: 22px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: -0.2px;
   color: var(--black-three);
 }
@@ -243,10 +237,6 @@
   height: 39px;
   font-family: "Montserrat", sans-serif;
   font-size: 32px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: normal;
   color: var(--black-three);
 }
@@ -257,10 +247,6 @@
   opacity: 0.5;
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: normal;
   color: var(--black-three);
 }
@@ -363,10 +349,6 @@
   margin: 24px 0;
   font-family: "Montserrat", sans-serif;
   font-size: 20px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: -0.18px;
   color: #888;
   text-transform: uppercase;

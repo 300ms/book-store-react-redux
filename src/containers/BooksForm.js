@@ -48,7 +48,7 @@ class BooksForm extends React.Component {
     const { title } = this.state;
     return (
       <div className="form-block">
-        <div className="form-title">
+        <div className="form-title font-bold">
           add new book
         </div>
         <form action="#" onSubmit={this.handleSubmit}>

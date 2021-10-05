@@ -9,8 +9,8 @@ const Book = (props) => {
     <li className="list-item Lesson-Panel">
       <div className="book-actions">
         <div className="">
-          <h3 className="School-of">{book.category}</h3>
-          <h1 className="title">{book.title}</h1>
+          <h3 className="School-of font-bold">{book.category}</h3>
+          <h1 className="title font-bold">{book.title}</h1>
           <h2 className="Suzanne-Collins">Author here</h2>
         </div>
         <div className="book-options">
@@ -24,8 +24,8 @@ const Book = (props) => {
       <div className="completion-meter">
         <div className="Rectangle-3"><div className="Oval-2" /></div>
         <div>
-          <h1 className="-Percent-Complete">64%</h1>
-          <p className="Completed">Completed</p>
+          <h1 className="-Percent-Complete font-normal">64%</h1>
+          <p className="Completed font-normal">Completed</p>
         </div>
 
       </div>
