@@ -6,28 +6,38 @@ const Book = (props) => {
   const { book, handleRemoveBook } = props;
 
   return (
-    <tr id="book-row">
-      <td id="info">
-        <span className="book-category">{book.category}</span>
-        <br />
-        <span className="book-title">{book.title}</span>
-        <br />
-        <span className="book-id">{book.id}</span>
-        <br />
-        <span className="span-block">
-          <span className="book-options">Comments</span>
-          <button className="book-options" type="submit" onClick={() => handleRemoveBook(book)}>Remove</button>
-          <span className="book-options">Edit</span>
-        </span>
-      </td>
-      <td className="progress">
-        <span className="Rectangle-3 span-block">
-          <span className="Oval-2 span-block" />
-        </span>
-      </td>
-      <td className="Line-2 span-block" />
-      <td className="chapter"><span className="empty">Chapter Info</span></td>
-    </tr>
+    <li className="list-item Lesson-Panel">
+      <div className="book-actions">
+        <div className="">
+          <h3 className="School-of">{book.category}</h3>
+          <h1 className="title">{book.title}</h1>
+          <h2 className="Suzanne-Collins">Author here</h2>
+        </div>
+        <div className="book-options">
+          <button type="button" className="book-option">Comments</button>
+          {' '}
+          <button type="button" className="book-option middle-option" onClick={() => handleRemoveBook(book)}>Remove Book</button>
+          {' '}
+          <button type="button" className="book-option">Comments</button>
+        </div>
+      </div>
+      <div className="completion-meter">
+        <div className="Rectangle-3"><div className="Oval-2" /></div>
+        <div>
+          <h1 className="-Percent-Complete">64%</h1>
+          <p className="Completed">Completed</p>
+        </div>
+
+      </div>
+      <div className="Line-2" />
+      <div className="progress-numbers">
+        <div>
+          <p className="Current-Chapter">Current chapter</p>
+          <p className="Current-Lesson">Chapter 17</p>
+        </div>
+        <button className="Rectangle-2" type="button"><p className="Update-progress base-button">update progress</p></button>
+      </div>
+    </li>
   );
 };
 

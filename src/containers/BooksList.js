@@ -28,35 +28,30 @@ const renderList = ({ state, handleRemoveBook, handleFilterChange }) => {
   const bookList = state.books;
 
   return (
-    <div className="booksList">
-      <div className="filter-category">
-        <span>Category Filter:&nbsp;&nbsp;</span>
-        <CategoryFilter
-          handleFilterChange={handleFilterChange}
-        />
-      </div>
-      <div className="table-wrapper">
-        <table className="fl-table">
-          <tbody>
-            {
-              bookList.map((book) => {
-                const filter = filterBook(book, state.filter);
-                if (filter) {
-                  return (
-                    <Book
-                      book={book}
-                      key={book.id}
-                      handleRemoveBook={handleRemoveBook}
-                    />
-                  );
-                }
-
-                return null;
-              })
+    <div>
+      <CategoryFilter
+        handleFilterChange={handleFilterChange}
+      />
+      <ul>
+        {
+          // eslint-disable-next-line
+          bookList.map(book => {
+            const fBook = filterBook(book, state.filter);
+            if (fBook) {
+              return (
+                <Book
+                  key={book.id}
+                  id={book.id}
+                  book={book}
+                  handleRemoveBook={handleRemoveBook}
+                />
+              );
             }
-          </tbody>
-        </table>
-      </div>
+          })
+
+        }
+
+      </ul>
     </div>
   );
 };

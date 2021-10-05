@@ -3,26 +3,14 @@ import BooksList from '../containers/BooksList';
 import BooksForm from '../containers/BooksForm';
 
 const App = () => (
-  <div className="container">
-    <nav className="nav">
-      <span className="Bookstore-CMS Text-Style-5">
-        Bookstore CMS
-      </span>
-
-      <span className="BOOKS Text-Style-7">
-        BOOKS
-      </span>
-
-      <span className="CATEGORIES Text-Style-7">
-        CATEGORIES
-      </span>
-
-      <div className="Oval">
-        <div className="Mask" />
-      </div>
-    </nav>
+  <div className="panel">
+    <div className="panel-bg">
+      <span className="title-header">Bookstore CMS</span>
+      <p className="books">books</p>
+      <p />
+      <i className="login" />
+    </div>
     <BooksList />
-    <div className="Line" />
     <BooksForm />
   </div>
 );
