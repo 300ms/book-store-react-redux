@@ -34,7 +34,7 @@
   width: 20rem;
   height: 2.313rem;
   margin: 0.375rem 2.938rem 0.125rem 0;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 1.875rem;
   font-weight: bold;
   font-stretch: normal;
@@ -48,7 +48,7 @@
   width: 3.688rem;
   height: 1rem;
   margin: 1.125rem 2.563rem 0.688rem 0;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 0.813rem;
   font-weight: normal;
   font-stretch: normal;
@@ -63,7 +63,7 @@
   height: 1rem;
   margin: 1.125rem 30.5rem 0.688rem 2.563rem;
   opacity: 0.5;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 0.813rem;
   font-weight: normal;
   font-stretch: normal;
@@ -87,8 +87,9 @@
   background-color: var(--azure);
 }
 
-.book-row {
-  width: 75rem;
+#book-row {
+  display: flex;
+  justify-content: space-between;
   height: 10.625rem;
   margin: 2.313rem 6.25rem 0;
   padding: 2rem 9.188rem 1.625rem 1.688rem;
@@ -97,8 +98,153 @@
   background-color: #fff;
 }
 
-.info {
-  
+#info {
+  text-align: left;
+}
+
+.book-category {
+  width: 3.063rem;
+  height: 1.125rem;
+  margin: 0 2.438rem 0 0;
+  opacity: 0.5;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.book-title {
+  width: 12.313rem;
+  height: 1.813rem;
+  margin: 0.188rem 20.188rem 0 0;
+  font-family: RobotoSlab, sans-serif;
+  font-size: 1.375rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: #121212;
+}
+
+.book-id {
+  width: 6.688rem;
+  height: 1.188rem;
+  margin: 0.25rem 0 0;
+  font-family: RobotoSlab, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.book-options {
+  width: 4.563rem;
+  height: 1.188rem;
+  margin: 0.188rem 0.938rem 0.125rem 0;
+  font-family: RobotoSlab, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+  background-color: transparent;
+  border: 0;
+}
+
+.Line {
+  width: auto;
+  height: 0;
+  margin: 10px 70px 70px;
+  border: solid 1px #e8e8e8;
+  align-self: center;
+}
+
+.Line-2 {
+  width: 0;
+  height: 4.375rem;
+  margin: auto;
+  border: solid 1px #e8e8e8;
+}
+
+.empty {
+  margin: auto;
+}
+
+.book-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  margin: 10px 70px 70px;
+  box-shadow: 0 35px 50px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  color: #fff;
+  background: transparent;
+}
+
+.book-form-header {
+  height: 1.5rem;
+  margin: 1.813rem 32.75rem 1.188rem 0;
+  font-family: Montserrat, sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888;
+}
+
+#title-input {
+  width: 41.5rem;
+  height: 2.813rem;
+  margin: 1.188rem 2.125rem 0 0;
+  border-radius: 4px;
+  border: solid 1px var(--white);
+  background-color: #fff;
+}
+
+#category-input {
+  width: 17.813rem;
+  height: 2.813rem;
+  margin: 1.188rem 2.125rem 0;
+  border-radius: 4px;
+  border: solid 1px var(--white);
+  background-color: #fff;
+}
+
+.add-book-button {
+  width: 11.5rem;
+  height: 2.813rem;
+  margin: 1.188rem 0 0 2.125rem;
+  border-radius: 6px;
+  background-color: var(--azure);
+}
+
+.add-book-button-span {
+  font-family: RobotoSlab, sans-serif;
+  font-size: 0.65rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+}
+
+.form-fields {
+  display: flex;
+  justify-content: space-around;
 }
 
 /* Table Styles */
@@ -120,24 +266,6 @@
   background-color: white;
 }
 
-.book-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 100%;
-  margin: 10px 70px 70px;
-  box-shadow: 0 35px 50px rgba(0, 0, 0, 0.2);
-  padding: 10px;
-  color: #fff;
-  background: #324960;
-}
-
-.form-fields {
-  width: 70%;
-  display: flex;
-  justify-content: space-around;
-}
-
 .fl-table td,
 .fl-table th {
   text-align: center;
@@ -145,8 +273,10 @@
 }
 
 .fl-table td {
-  border-right: 1px solid #f8f8f8;
   font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .fl-table thead th {

@@ -6,23 +6,23 @@ const Book = (props) => {
   const { book, handleRemoveBook } = props;
 
   return (
-    <tr className="book-row">
-      <td className="info">
-        {book.category}
-        {' '}
+    <tr id="book-row">
+      <td id="info">
+        <span className="book-category">{book.category}</span>
         <br />
-        {book.title}
-        {' '}
+        <span className="book-title">{book.title}</span>
         <br />
-        {book.id}
-        {' '}
+        <span className="book-id">{book.id}</span>
         <br />
         <div>
-          <button type="submit" onClick={() => handleRemoveBook(book)}>Delete Book</button>
+          <span className="book-options">Comments</span>
+          <button className="book-options" type="submit" onClick={() => handleRemoveBook(book)}>Remove</button>
+          <span className="book-options">Edit</span>
         </div>
       </td>
-      <td className="progress"> Progress </td>
-      <td className="chapter">Chapter Info</td>
+      <td className="progress"><span className="empty">Progress</span></td>
+      <div className="Line-2" />
+      <td className="chapter"><span className="empty">Chapter Info</span></td>
     </tr>
   );
 };

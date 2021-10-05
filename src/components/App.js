@@ -22,6 +22,7 @@ const App = () => (
       </div>
     </nav>
     <BooksList />
+    <div className="Line" />
     <BooksForm />
   </div>
 );
