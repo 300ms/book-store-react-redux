@@ -14,14 +14,18 @@ const Book = (props) => {
         <br />
         <span className="book-id">{book.id}</span>
         <br />
-        <div>
+        <span className="span-block">
           <span className="book-options">Comments</span>
           <button className="book-options" type="submit" onClick={() => handleRemoveBook(book)}>Remove</button>
           <span className="book-options">Edit</span>
-        </div>
+        </span>
       </td>
-      <td className="progress"><span className="empty">Progress</span></td>
-      <div className="Line-2" />
+      <td className="progress">
+        <span className="Rectangle-3 span-block">
+          <span className="Oval-2 span-block" />
+        </span>
+      </td>
+      <td className="Line-2 span-block" />
       <td className="chapter"><span className="empty">Chapter Info</span></td>
     </tr>
   );
